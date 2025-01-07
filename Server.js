@@ -6,13 +6,15 @@ require("dotenv").config();
 const port = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
-app.use("/cssFile", express.static("public  "));
+app.get('/',(req,res)=>{
+  res.send("hey")
+})
+app.use("/cssFile", express.static("public  "));     
 app.use("/profiles",express.static('uploads'))
 // app.get("/", (req, res) => res.send("run Server"));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
-
-app.use('/api/data',StudentRouter)
+ app.use('/api/data',StudentRouter)
 
 mongoose
   // .connect("mongodb+srv://yp8749881:yash123@yash.9nuv0.mongodb.net/rnw")

@@ -7,7 +7,6 @@ const upload = require('../middleware/uploadfile')
 // app.post('/',StudentController.store)
 // app.post('/',upload.array('std_profile',4),StudentController.store)
 
-
 const multipleImg =[
     {name:"std_profile",maxCount:6},
     {name:'std_resume',maxCount:1}
